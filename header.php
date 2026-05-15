@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php global $base; ?>
 <head>
   <!-- Basic -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+ 
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -37,7 +37,7 @@
 
 <!-- LOADER -->
 <div id="preloader">
-    <img class="preloader" src="assets/images/loader.gif" alt="">
+    <img class="preloader" src="<?php echo $base ?> /assets/images/loader.gif" alt="">
 </div><!-- end loader -->
 <!-- END LOADER -->
 
@@ -103,7 +103,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                        <a href="index.html"><img src="<?php echo $base ?>/assets/images/flogo.png" alt=""></a>
                     </div><!-- end logo -->
                 </div>
             </div><!-- end row -->
@@ -149,7 +149,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_01.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_01.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -167,7 +167,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_02.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_02.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -185,7 +185,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_03.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_03.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -203,7 +203,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_04.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_04.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -224,7 +224,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_05.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_05.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -242,7 +242,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_06.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_06.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -260,7 +260,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_07.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_07.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -279,7 +279,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_08.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_08.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -300,7 +300,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_09.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_09.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -318,7 +318,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_11.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_11.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -336,7 +336,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_12.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_12.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -354,7 +354,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_13.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_13.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -375,7 +375,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_14.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_14.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -393,7 +393,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_15.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_15.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -411,7 +411,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_16.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_16.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -430,7 +430,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_17.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_17.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -451,7 +451,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_18.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_18.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -469,7 +469,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_19.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_19.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -487,7 +487,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_20.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_20.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
@@ -505,7 +505,7 @@
                                                         <div class="blog-box">
                                                             <div class="post-media">
                                                                 <a href="single.html" title="">
-                                                                    <img src="assets/upload/menu_21.jpg" alt=""
+                                                                    <img src="<?php echo $base ?> //upload/menu_21.jpg" alt=""
                                                                         class="img-fluid">
                                                                     <div class="hovereffect">
                                                                     </div><!-- end hover -->
