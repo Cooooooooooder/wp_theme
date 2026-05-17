@@ -7,32 +7,25 @@
                     <h2 class="widget-title">Recent Posts</h2>
                     <div class="blog-list-widget">
                         <div class="list-group">
-                            <a href="single.html"
-                                class="list-group-item list-group-item-action flex-column align-items-start">
-                                <div class="w-100 justify-content-between">
-                                    <img src="assets/upload/blog_square_01.jpg" alt="" class="img-fluid float-left">
-                                    <h5 class="mb-1">5 Beautiful buildings you need to before dying</h5>
-                                    <small>12 Jan, 2016</small>
-                                </div>
-                            </a>
 
-                            <a href="single.html"
-                                class="list-group-item list-group-item-action flex-column align-items-start">
-                                <div class="w-100 justify-content-between">
-                                    <img src="assets/upload/blog_square_02.jpg" alt="" class="img-fluid float-left">
-                                    <h5 class="mb-1">Let's make an introduction for creative life</h5>
-                                    <small>11 Jan, 2016</small>
-                                </div>
-                            </a>
+                            <?php
 
-                            <a href="single.html"
-                                class="list-group-item list-group-item-action flex-column align-items-start">
-                                <div class="w-100 last-item justify-content-between">
-                                    <img src="assets/upload/blog_square_03.jpg" alt="" class="img-fluid float-left">
-                                    <h5 class="mb-1">Did you see the most beautiful sea in the world?</h5>
-                                    <small>07 Jan, 2016</small>
-                                </div>
-                            </a>
+                            $recent_posts = get_posts(['numberposts' => 3]);
+                            foreach ($recent_posts as $recent_post) {
+                            ?>
+                                <a href="<?php echo get_permalink($recent_post) ?>"
+                                    class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="w-100 justify-content-between">
+                                        <?php echo get_the_post_thumbnail($recent_post, 'thumbnail', ['class' => 'float-left img-fluid']); ?>
+                                        <h5 class="mb-1"><?php echo $recent_post->post_title ?></h5>
+                                        <small><?php echo get_the_date('d M,Y', $recent_post->ID) ?></small>
+                                    </div>
+                                </a>
+                            <?php
+
+                            }
+                            ?>
+
                         </div>
                     </div><!-- end blog-list -->
                 </div><!-- end widget -->
@@ -43,50 +36,36 @@
                     <h2 class="widget-title">Popular Posts</h2>
                     <div class="blog-list-widget">
                         <div class="list-group">
-                            <a href="single.html"
-                                class="list-group-item list-group-item-action flex-column align-items-start">
-                                <div class="w-100 justify-content-between">
-                                    <img src="assets/upload/blog_square_04.jpg" alt="" class="img-fluid float-left">
-                                    <h5 class="mb-1">Banana-chip chocolate cake recipe with customs</h5>
-                                    <span class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                </div>
-                            </a>
 
-                            <a href="single.html"
-                                class="list-group-item list-group-item-action flex-column align-items-start">
-                                <div class="w-100 justify-content-between">
-                                    <img src="assets/upload/blog_square_07.jpg" alt="" class="img-fluid float-left">
-                                    <h5 class="mb-1">10 practical ways to choose organic vegetables</h5>
-                                    <span class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                </div>
-                            </a>
+                            <?php
 
-                            <a href="single.html"
-                                class="list-group-item list-group-item-action flex-column align-items-start">
-                                <div class="w-100 last-item justify-content-between">
-                                    <img src="assets/upload/blog_square_06.jpg" alt="" class="img-fluid float-left">
-                                    <h5 class="mb-1">We are making homemade ravioli, nice and good</h5>
-                                    <span class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                </div>
-                            </a>
+                            $popular_posts = get_posts([
+                                'numberposts' => 3,
+                                'orderby' => 'meta_value_num',
+                                'meta_key' => 'wpc_post_views',
+                                'order' => "DESC"
+
+                            ]);
+                            foreach ($popular_posts as $popular_post) {
+                            ?>
+                                <a href="<?php echo get_permalink($popular_post) ?>"
+                                    class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="w-100 justify-content-between">
+                                        <?php echo get_the_post_thumbnail($popular_post, 'thumbnail', ['class' => 'float-left img-fluid']); ?>
+                                        <h5 class="mb-1"><?php echo $popular_post->post_title ?></h5>
+                                        <span class="rating">
+                                            <i class="fa fa-eye"></i> <?php echo ((int)(get_post_meta($popular_post->ID, 'wpc_post_views', true))) ?>
+
+                                        </span>
+                                    </div>
+                                </a>
+
+                            <?php
+
+                            }
+                            ?>
+
+
                         </div>
                     </div><!-- end blog-list -->
                 </div><!-- end widget -->
@@ -97,13 +76,23 @@
                     <h2 class="widget-title">Popular Categories</h2>
                     <div class="link-widget">
                         <ul>
-                            <li><a href="#">Fahsion <span>(21)</span></a></li>
-                            <li><a href="#">Lifestyle <span>(15)</span></a></li>
-                            <li><a href="#">Art & Design <span>(31)</span></a></li>
-                            <li><a href="#">Health Beauty <span>(22)</span></a></li>
-                            <li><a href="#">Clothing <span>(66)</span></a></li>
-                            <li><a href="#">Entertaintment <span>(11)</span></a></li>
-                            <li><a href="#">Food & Drink <span>(87)</span></a></li>
+                            <?php
+                            $popular_categories = get_terms([
+                                'taxonomy' => 'category',
+                                'orderby' => 'count',
+                                'order' => 'DESC',
+                                'h'
+                            ]);
+                            if (is_array($popular_categories)) {
+                                foreach ($popular_categories as $popular_category) {
+                            ?>
+
+                                    <li><a href="<?php echo get_term_link($popular_category); ?>"> <?php echo $popular_category -> name;?> <span><?php echo "(".$popular_category -> count.")"; ?></span></a></li>
+                            <?php
+                                }
+                            }
+                            ?>
+
                         </ul>
                     </div><!-- end link-widget -->
                 </div><!-- end widget -->

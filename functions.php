@@ -15,6 +15,7 @@ if (!function_exists('wpc_load_assets')) {
         wp_enqueue_script('wpc_tether-script', $base . '/assets/js/tether.min.js', [], false, true);
         wp_enqueue_script('wpc_bootstrap-script', $base . '/assets/js/bootstrap.min.js', [], false, true);
         wp_enqueue_script('wpc_custom-script', $base . '/assets/js/custom.js', [], false, true);
+        wp_enqueue_script('wpc_custom-masonry', $base . '/assets/js/masonry.js', [], false, true);
     }
 
     add_action('wp_enqueue_scripts', 'wpc_load_assets');
