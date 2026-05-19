@@ -87,7 +87,7 @@
                                 foreach ($popular_categories as $popular_category) {
                             ?>
 
-                                    <li><a href="<?php echo get_term_link($popular_category); ?>"> <?php echo $popular_category -> name;?> <span><?php echo "(".$popular_category -> count.")"; ?></span></a></li>
+                                    <li><a href="<?php echo get_term_link($popular_category); ?>"> <?php echo $popular_category->name; ?> <span><?php echo "(" . $popular_category->count . ")"; ?></span></a></li>
                             <?php
                                 }
                             }
