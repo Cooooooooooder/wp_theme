@@ -13,6 +13,15 @@ if (!function_exists('wpc_register_sidebars')) {
             'before_title' => "<h2 class='widget-title'>",
             'after_title' => "</h2>",
         ]);
+        register_sidebars(3, [
+            'id' => 'footer-area',
+            'name' => 'Footer Area (%d)',
+            'description' => 'this sidebar is contained in a footer column',
+            'before_widget' => "<div class='widget'>",
+            'after_widget' => '</div>',
+            'before_title' => "<h2 class='widget-title'>",
+            'after_title' => "</h2>",
+        ]);
     }
     add_action('widgets_init', 'wpc_register_sidebars');
 }
